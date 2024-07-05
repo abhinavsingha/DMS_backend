@@ -1,9 +1,7 @@
 package com.dms_backend.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,16 +13,17 @@ import java.time.Instant;
 @Table(name = "year_master")
 public class YearMaster {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
     @Column(name = "Name", nullable = false, length = 45)
     private String name;
 
-    @Column(name = "createdOn")
+    @Column(name = "createdon")
     private Instant createdOn;
 
-    @Column(name = "updatedOn")
+    @Column(name = "updatedon")
     private Instant updatedOn;
 
 }

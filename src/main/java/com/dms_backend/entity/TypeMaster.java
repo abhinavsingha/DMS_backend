@@ -21,10 +21,10 @@ public class TypeMaster {
     @Column(name = "Name", nullable = false, length = 45)
     private String name;
 
-    @Column(name = "updatedOn")
+    @Column(name = "updatedon")
     private Instant updatedOn;
 
-    @Column(name = "createdOn")
+    @Column(name = "createdon")
     private Instant createdOn;
 
 }
